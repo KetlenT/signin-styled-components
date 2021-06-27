@@ -10,8 +10,11 @@ import {
     Title,
     Link,
     Footer,
+    Forgot,
     Terms
 } from "./styles";
+
+import { Header } from './styles';
 
 const Form = ({
     title,
@@ -22,7 +25,7 @@ const Form = ({
     route,
     link,
     terms,
-    onSubmit
+    onSubmit,
 }) => {
 
 
@@ -30,9 +33,15 @@ const Form = ({
         <Container
             onSubmit={onSubmit} >
 
+            <Header>Invision</Header>
+
             <Title>{title}</Title>
 
             {children}
+
+            {title === 'Welcome to Invision' ?
+                <Forgot href="#"> Forgot password? </Forgot>
+                : <></>}
 
             <PrimaryButton title={primaryButtonTite} />
 
