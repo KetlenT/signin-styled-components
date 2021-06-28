@@ -60,6 +60,7 @@ export const Forgot = styled.a`
 export const Header = styled(Title)`
     margin:80px 0px 0px 300px;
     font-weight: bold;
+    color:#000;
 
   
 `;
